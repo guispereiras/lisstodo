@@ -15,7 +15,7 @@ def homepage():
 
 @app.route("/cadastro")
 def atributos():
-    return render_template("cadastro.html")
+     return render_template("cadastro.html")
 
 # colocar o site no ar
 if __name__ == "__main__":
