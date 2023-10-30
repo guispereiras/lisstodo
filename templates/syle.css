@@ -1,0 +1,29 @@
+/* Geral */
+/* aplicação de configurações gerais. Resetar o documento com o código abaixo*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* colocar a cor no site de forma geral*/
+body{
+    background-color: black;
+    height: 1000vh; /*altura inteira do site padrão 1000vh*/
+    }
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Estilo do cabeçalho */
+header{
+    padding: 40px 44%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
