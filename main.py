@@ -27,5 +27,25 @@ def login2():
 
     return redirect("/cadastro")
 
+# Rota ler cadastro.html e puxar os dados dos input's
+@app.route('/cadastro', methods=['POST'])
+def cadastro():
+
+    email = request.form.get("email")
+    nome = request.form.get("nome")
+    idade = request.form.get("idade")
+    sexo1 = request.form.get("sexo1")
+    sexo2 = request.form.get("sexo2")
+    senha = request.form.get("senha")
+
+    print(email)
+    print(nome)
+    print(idade)
+    print(sexo1)
+    print(sexo2)
+    print(senha)
+
+    return redirect("/")
+
 if __name__ == "__main__":
     app.run(debug=True)
