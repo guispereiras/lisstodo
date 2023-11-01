@@ -1,4 +1,5 @@
 from flask import Flask, render_template, redirect, request
+from connection import create, conex
 
 app = Flask(__name__)
 # Rota home
@@ -45,7 +46,11 @@ def cadastro():
     print(sexo2)
     print(senha)
 
+    
+    create(email, nome, idade, sexo1, senha)
+
     return redirect("/")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
