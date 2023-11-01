@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, request
-from connection import create, conex
+from connection import create, loginsexo
 
 
 app = Flask(__name__)
@@ -11,6 +11,7 @@ def homepage():
 # Rota para ler o login.html antes de executa-lo (Gambiarrazap)
 @app.route("/login")
 def login1():
+
     return render_template("login.html")
 
 # Rota cadastro
@@ -27,7 +28,9 @@ def login2():
     print(email)
     print(senha)
 
-    return redirect("/cadastro")
+    loginsexo(email, senha)
+
+    return redirect("/")
 
 # Rota ler cadastro.html e puxar os dados dos input's
 @app.route('/cadastro', methods=['POST'])
