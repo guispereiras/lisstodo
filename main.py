@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, request
 from connection import create, conex
 
+
 app = Flask(__name__)
 # Rota home
 @app.route("/") 
