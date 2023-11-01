@@ -27,3 +27,36 @@ header > .interface{
     align-items: center;
     justify-content: space-between;
 }
+/* coloca a cor dos links e tbm tira o sublinhado deles */
+header a{
+    color: rgb(119, 119, 119);
+    text-decoration: none;
+    display: inline-block;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.1);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+/* deixa os links alinhados e com uma distancia de 40px */
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+/* arruma todas as caracteristicas do botao 'entrar' e a fonte dele */
+header .btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #004aad;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+header .btn-contato button:hover{
+    box-shadow: 0px 0px 8px #004badcb;
+}
