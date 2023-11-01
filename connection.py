@@ -28,3 +28,19 @@ def create(email, nome, idade, sexo, senha):
     print('Registro adicionado com sucesso')
     cursor.close()
     conex.close()
+
+def loginsexo(email, senha):
+    cursor = conex.cursor()
+
+    comando = f'SELECT senha FROM usuarios WHERE email = "{email}"'
+    cursor.execute(comando)
+    resultado = cursor.fetchone()
+
+    if resultado:
+        senha_banco = resultado[0]
+        if senha == senha_banco:
+            print("Login bem-sucedido")
+        else:
+            print("Senha incorreta")
+    else:
+        print("Email não encontrado")
