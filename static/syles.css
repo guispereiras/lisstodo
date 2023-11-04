@@ -42,12 +42,15 @@ header a:hover{
 header nav ul{
     list-style-type: none;
 }
-/* deixa os links alinhados e com uma distancia de 40px */
-header nav ul li {
-    display: inline-block;
-    padding: 0 40px;
-}
+    
+
 /* arruma todas as caracteristicas do botao 'entrar' e a fonte dele */
+header.btn-contato a {
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
 header .btn-contato button{
     padding: 10px 40px;
     font-size: 18px;
@@ -56,6 +59,7 @@ header .btn-contato button{
     border: 0;
     border-radius: 30px;
     cursor: pointer;
+
 }
 header .btn-contato button:hover{
     box-shadow: 0px 0px 8px #004badcb;
