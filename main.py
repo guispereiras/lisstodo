@@ -1,6 +1,5 @@
 from flask import Flask, render_template, redirect, request
-from connection import create, loginsexo
-
+from connection import login, create
 
 app = Flask(__name__)
 # Rota home
@@ -28,9 +27,15 @@ def login2():
     print(email)
     print(senha)
 
-    loginsexo(email, senha)
+    resultado_login = login(email, senha)
+    
+    if resultado_login == 'Senha incorreta':
+        return redirect("/login")
+    elif resultado_login == 'Email não encontrado':
+        return redirect("/login")
+    else:
+        return redirect("/")
 
-    return redirect("/")
 
 # Rota ler cadastro.html e puxar os dados dos input's
 @app.route('/cadastro', methods=['POST'])
