@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.html">
     <title>Login</title>
-</head> 
+</head>
+
 <body>
     <div id="form fundo">
         <center>
-        <h1>Login</h1>
+            <h1>Login</h1>
         </center>
-        <div id="form_frente" >
+        <div id="form_frente">
             <form action="/login" id="login" method="post">
                 <center>
-                <label for="email">E-mail: </label>
-                <input type="email" name="email" id="email" required placeholder="Digite seu E-mail:"><br><br>
-                <label for="senha" id="senha">Senha: </label>
-                <input type="password" name="senha" id="senha" required placeholder="Digite sua senha: "> <br><br>
-                <button type="submit" id="btn_login">                
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>ENTRAR
+                    <label for="email">E-mail: </label>
+                    <input type="email" name="email" id="email" required placeholder="Digite seu E-mail:"><br><br>
+                    <label for="senha" id="senha">Senha: </label>
+                    <input type="password" name="senha" id="senha" required placeholder="Digite sua senha: "> <br><br>
+                    <button type="submit" id="btn_login">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>ENTRAR
                 </center>
                 </button>
             </form>
+
+            <label id="mensagem">
+                <p>{{ mensagem }}</p>
+            </label>
 
         </div>
 
     </div>
 </body>
+
 </html>

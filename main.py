@@ -19,7 +19,7 @@ def atributos():
      return render_template("cadastro.html")
 
 # Rota ler login.html e puxar os dados dos input's
-@app.route("/login", methods=['POST'])
+@app.route("/login", methods=['POST', 'GET'])
 def login2():
     
     email = request.form.get("email")
@@ -27,14 +27,18 @@ def login2():
     print(email)
     print(senha)
 
+    mensagem = None
+
     resultado_login = login(email, senha)
     
     if resultado_login == 'Senha incorreta':
-        return redirect("/login")
+        mensagem = 'Senha incorreta. Tente novamente.'
     elif resultado_login == 'Email não encontrado':
-        return redirect("/login")
+        mensagem = 'E-mail não encontrado'
     else:
         return redirect("/")
+    
+    return render_template("login.html", mensagem=mensagem)
 
 
 # Rota ler cadastro.html e puxar os dados dos input's
