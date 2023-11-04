@@ -1,66 +1,75 @@
-/* Geral */
-/* aplicação de configurações gerais. Resetar o documento com o código abaixo*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-/* colocar a cor no site de forma geral*/
-body{
-    background-color: black;
-    height: 1000vh; /*altura inteira do site padrão 1000vh*/
-    }
-
-.interface{
+/* Estilo da interface */
+.interface {
     max-width: 1280px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+body{
+    background: black;
+    height: 1000vh;
 }
 
 /* Estilo do cabeçalho */
-header{
-    padding: 40px 44%;
+header {
+    padding: 40px 0;
 }
 
-header > .interface{
+/* Estilo do logotipo */
+header .logo a {
+    text-decoration: none;
+}
+
+/* Estilo dos botões -> botão entrar */
+header .btn-entrar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
-/* coloca a cor dos links e tbm tira o sublinhado deles */
-header a{
-    color: rgb(119, 119, 119);
+
+header .btn-entrar a {
+    display: inline-block;
     text-decoration: none;
-    display: inline-block;
 }
 
-header a:hover{
-    color: #fff;
-    transform: scale(1.1);
-}
-
-header nav ul{
-    list-style-type: none;
-}
-    
-
-/* arruma todas as caracteristicas do botao 'entrar' e a fonte dele */
-header.btn-contato a {
-    display: inline-block;
-    margin-right: 10px;
-
-}
-
-header .btn-contato button{
-    padding: 10px 40px;
+header .btn-entrar button {
+    padding: 10px 20px;
+    margin-right: -60px;
     font-size: 18px;
     font-weight: 700;
     background-color: #004aad;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
-
 }
-header .btn-contato button:hover{
+
+header .btn-entrar button:hover {
     box-shadow: 0px 0px 8px #004badcb;
+}
+
+/* Estilo dos botões -> botão cadastrar */
+header .btn-cadastrar {
+    display: flex;
+    align-items: center;
+}
+
+header .btn-cadastrar a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+header .btn-cadastrar button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #32CD32;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+header .btn-cadastrar button:hover {
+    box-shadow: 0px 0px 8px #32cd3270;
 }
