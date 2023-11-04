@@ -1,17 +1,25 @@
 /* Estilo da interface */
-.interface {
-    max-width: 1280px;
+*{
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     background: black;
     height: 1000vh;
 }
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+
 
 /* Estilo do cabeçalho */
 header {
@@ -19,57 +27,75 @@ header {
 }
 
 /* Estilo do logotipo */
-header .logo a {
+header .logo a{
     text-decoration: none;
 }
 
-/* Estilo dos botões -> botão entrar */
-header .btn-entrar {
-    display: flex;
-    align-items: center;
-}
-
-header .btn-entrar a {
-    display: inline-block;
-    text-decoration: none;
-}
-
+/* Estilo dos botões */
 header .btn-entrar button {
     padding: 10px 20px;
-    margin-right: -60px;
     font-size: 18px;
     font-weight: 700;
     background-color: #004aad;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
+    gap: 90px;
 }
 
 header .btn-entrar button:hover {
     box-shadow: 0px 0px 8px #004badcb;
 }
 
-/* Estilo dos botões -> botão cadastrar */
-header .btn-cadastrar {
-    display: flex;
-    align-items: center;
-}
 
-header .btn-cadastrar a{
-    display: inline-block;
-    text-decoration: none;
-}
-
+/* Estilo dos botões */
 header .btn-cadastrar button {
     padding: 10px 20px;
     font-size: 18px;
     font-weight: 700;
-    background-color: #32CD32;
+    background-color: #00ad25;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
+    gap: 90px;
 }
 
 header .btn-cadastrar button:hover {
-    box-shadow: 0px 0px 8px #32cd3270;
+    box-shadow: 0px 0px 8px #00ad48cb;
+}
+
+/* ESTILO TOPO SITE*/
+
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: antiquewhite;
+    font-size: 50px;
+    line-height: 40px;
+}
+
+.topo-do-site .texto p{
+    color: antiquewhite;
+    margin: 40px 0px;
+}
+.topo-do-site .img-topo-site{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate !important;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 40%;
+    }
 }

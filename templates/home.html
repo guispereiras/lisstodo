@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" class="text" href= "static\syles.css">
+    <link rel="stylesheet" class="text" href="static/syles.css">
     <meta charset="UTF-8">
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
     <header>
         <div class="interface">
             <div class="logo">
-                <a href ="h">
-                <img src="static/mkt@TL2020.png" alt="Logo Lisstodo">
+                <a href="h">
+                    <img src="static/mkt@TL2020.png" alt="Logo Lisstodo">
                 </a>
             </div><!--logo-->
 
@@ -31,9 +31,46 @@
             </div>
         </div> <!--interface-->
     </header>
+    <section class="topo-do-site">
+        <div class="conteudo">
+            <div class="flex">
+                <div class="texto">
+                    <h1 id="mensagem"></h1>
+                    <p>O Liss ToDo é um aplicativo feito por estudantes, 
+                        especialmente projetado para atender às necessidades dos estudantes, 
+                        proporcionando uma plataforma dinâmica que facilita a organização de todas as atividades acadêmicas. 
+                        Com recursos inovadores, o Liss ToDo permite que você sequencie suas tarefas, 
+                        datas de entrega e compromissos oficiais, colocando todas as informações essenciais ao alcance das suas mãos. 
+                        Este aplicativo/site é o parceiro perfeito para ajudar você a gerenciar suas tarefas de forma eficiente e manter seu calendário acadêmico sempre sob controle.</p>
+                </div>
+                <div class="img-topo-site">
+                    <img src="static/Liss.png" alt="">
 
-    <div class="coteudo"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+         // Frase a ser exibida
+        const frase = "TRANSFORMANDO IDEIAS EM TAREFAS";
 
+        const mensagemElement = document.getElementById("mensagem");
+        const letras = frase.split(""); // Divide a frase em letras
+        let indiceLetra = 0;
+
+        function exibirProximaLetra() {
+            if (indiceLetra < letras.length) {
+                mensagemElement.textContent += letras[indiceLetra];
+                indiceLetra++;
+                setTimeout(exibirProximaLetra, 100); // Tempo de exibição de cada letra (em milissegundos)
+        }
+        }
+
+        // Iniciar a exibição da primeira letra
+        exibirProximaLetra();
+        
+    </script>
+    
 </body>
 
 </html>
