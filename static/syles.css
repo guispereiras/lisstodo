@@ -26,43 +26,66 @@ header {
     padding: 40px 0;
 }
 
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a{
+    color: rgb(124, 124, 124);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2;
+}
+
+head a:hover{
+    color: aliceblue;
+    transform: scale(1.3);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+/* Estilos dos botões */
+header .btn-entrar button{
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: blue;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+header .btn-entrar button:hover{
+    box-shadow: 0px 0px 8px rgba(0, 0, 255, 0.411);
+}
+
+header .btn-cadastrar button{
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgb(0, 255, 21);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+header .btn-cadastrar button:hover{
+    box-shadow: 0px 0px 8px rgba(0, 255, 21, 0.288);
+}
+
+
 /* Estilo do logotipo */
 header .logo a{
     text-decoration: none;
 }
 
-/* Estilo dos botões */
-header .btn-entrar button {
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: 700;
-    background-color: #004aad;
-    border: 0;
-    border-radius: 30px;
-    cursor: pointer;
-    gap: 90px;
-}
-
-header .btn-entrar button:hover {
-    box-shadow: 0px 0px 8px #004badcb;
-}
-
-
-/* Estilo dos botões */
-header .btn-cadastrar button {
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: 700;
-    background-color: #00ad25;
-    border: 0;
-    border-radius: 30px;
-    cursor: pointer;
-    gap: 90px;
-}
-
-header .btn-cadastrar button:hover {
-    box-shadow: 0px 0px 8px #00ad48cb;
-}
 
 /* ESTILO TOPO SITE*/
 
@@ -78,17 +101,19 @@ section.topo-do-site .flex{
 
 .topo-do-site h1{
     color: antiquewhite;
-    font-size: 50px;
+    font-size: 42px;
     line-height: 40px;
+    justify-content: center;
 }
 
 .topo-do-site .texto p{
     color: antiquewhite;
     margin: 40px 0px;
+    justify-content: center;
 }
-.topo-do-site .img-topo-site{
+.topo-do-site .img-topo-site img{
     position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate !important;
+    animation: flutuar 2s ease-in-out infinite alternate;
 }
 
 @keyframes flutuar{
@@ -96,6 +121,6 @@ section.topo-do-site .flex{
         top: 0;
     }
     100%{
-        top: 40%;
+        top: 30%;
     }
 }
