@@ -1,0 +1,18 @@
+{
+  "name": "lisstodo",
+  "version": "1.0.0",
+  "description": "aprendendo usar o node",
+  "main": "1",
+  "scripts": {
+    "test": "2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "lisstodo"
+  },
+  "keywords": [
+    "1234"
+  ],
+  "author": "guilherme",
+  "license": "ISC"
+}
