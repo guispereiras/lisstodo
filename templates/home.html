@@ -15,27 +15,14 @@
 <body>
     <header>
         <div class="interface">
-            <div class="logo">
-                <a href="h">
-                    <img src="static/mkt@TL2020.png" alt="Logo Lisstodo">
-                </a>
-            </div><!--logo-->
 
             <nav class="menu-desktop">
                 <ul>
                
                 </ul>
             </nav>
-            <div class="btn-entrar">
-                <!-- Colocar link entrar -->
-                <a href="#">
-                    <button>Entrar</button>
                 </a>
             </div>
-            <div class="btn-cadastrar">
-                <!-- Colocar link cadastrar -->
-                <a href="#"> 
-                <button>Cadastrar</button>
                 </a>
             </div>
         </div>
@@ -59,10 +46,92 @@
                 </div>
             </div>
         </div>
+        <div>
+            <!-- styles2 -->
+            <link rel="stylesheet" href="static\style.css" />
+             <!-- font-awesome -->
+                <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+            />
+            <button class="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+              </button>
+              <aside class="sidebar">
+                <div class="sidebar-header">
+                    <div class="logo">
+                        <a href="h">
+                            <img id= "logoimage" src="static/mkt@TL2020.png" alt="Logo Lisstodo">
+                        </a>
+                    </div><!--logo-->
+                  <button class="close-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <!-- links -->
+                <ul class="links">
+                  <li>
+                    <a href="login.html">Entrar</a>
+                  </li>
+                  <li>
+                    <a href="cadastro.html">Cadastrar</a>
+                  </li>
+                  <li>
+                    <a href="contato.html">Contato</a>
+                  </li>
+                </ul>
+                <!-- social media -->
+                <!-- Redes sociais, descomentar quando tivermos nossas redes para contato ou etc --
+                    <ul class="social-icons">
+                  <li>
+                    <a href="https://www.twitter.com">
+                      <i class="fab fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.twitter.com">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.twitter.com">
+                      <i class="fab fa-behance"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.twitter.com">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.twitter.com">
+                      <i class="fab fa-sketch"></i>
+                    </a>
+                  </li>
+                </ul>
+              </aside>>
+              <-- javascript -->
+              <script>
+                  const toggleBtn = document.querySelector(".sidebar-toggle");
+                  const closeBtn = document.querySelector(".close-btn");
+                  const sidebar = document.querySelector(".sidebar");
+                  
+                  toggleBtn.addEventListener("click", function () {
+                    // if (sidebar.classList.contains("show-sidebar")) {
+                    //   sidebar.classList.remove("show-sidebar");
+                    // } else {
+                    //   sidebar.classList.add("show-sidebar");
+                    // }
+                    sidebar.classList.toggle("show-sidebar");
+                  });
+                  
+                  closeBtn.addEventListener("click", function () {
+                    sidebar.classList.remove("show-sidebar");
+                  });
+                  </script>
+        </div>
     </section>
     <script>
          // Frase a ser exibida
-        const frase = "TRANSFORMANDO SUAS IDEIAS EM TAREFAS";
+        const frase = "TRANSFORMANDO SUAS TAREFAS !";
 
         const mensagemElement = document.getElementById("mensagem");
         const letras = frase.split(""); // Divide a frase em letras
