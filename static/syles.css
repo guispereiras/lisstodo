@@ -60,18 +60,19 @@ html{
 }
 
 .container{
-    max-width: 1280px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
 header{
     width: 100%;
-    padding: 60px 4%;
+    padding: 60px 5%;
     position: fixed;
-    top: 0;
+    top: 0; 
     left: 0;
     transition: 0.5s;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: 600; 
 }
 
 header.rolagem{
@@ -103,6 +104,114 @@ header ul li a{
     justify-content: space-between;
 }
 
+.txtdin{
+  font-size: 45px;
+  font-weight: 300; 
+  padding: 60px 30%;
+  margin: 50px 50px;
+}
+
+.txtdin span{
+  position: relative;
+}
+
+.txtdin span::before{
+  content: "";
+  color: var(--clr-primary-2);
+  animation: palavras 20s infinite;
+}
+
+.txtdin span::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-left: 2px solid var(--clr-green-dark);
+  right: -10px;
+  opacity: 1;
+  animation: cursorr .8s infinite, digita 20s steps(15) infinite;
+  width: calc(100% + 18px);
+  background-color: var(--clr-grey-5);
+}
+
+@keyframes digita {
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+    width: 0;
+  }
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+    width: calc(100% + 18px);
+  }
+}
+
+@keyframes cursorr {
+  0%{
+    border-left: 2px solid var(--clr-grey-5);
+  }
+  
+}
+
+@keyframes palavras {
+  0%,20%{
+    content: "deixou o like?";
+  }
+  21%,40%{
+    content: "ativou o sininho?";
+  }
+  41%,60%{
+    content: "já comentou?";
+  }
+  61%,80%{
+    content: "ja se inscreveu?";
+  }
+  81%, 100%{
+    content: "ja se matou?";
+  }
+}
+
+.menu_nav{
+  position: relative;
+}
+
+.submenu{
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 26px);
+  max-width: max-content;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  transform: translateX(15%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .2s, opacity .4;
+}
+
+.submenu.show{
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.submenu__itens{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+
+.submenu__item{
+  display: flex;
+  align-items: center;
+  width: max-content;
+  transition: background-color 0.2s;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.submenu__item:hover{
+  background-color: #eee;
+  border-radius: 5px;
+}
 
 body {
     height: 1000vh;
