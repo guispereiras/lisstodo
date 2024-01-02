@@ -45,6 +45,7 @@
 }
 
 
+
 *,
 ::after,
 ::before {
@@ -53,6 +54,55 @@
   box-sizing: border-box;
 
 }
+
+html{
+    height: 500vh;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    padding: 60px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+header.rolagem{
+    background-color: #fff;
+    padding: 30px 4%;
+}
+
+header.rolagem a{
+    color: var(--clr-primary-2);
+}
+
+header ul{
+    list-style-type: none;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0 60px;
+}
+
+header ul li a{
+    color: var(--clr-grey-9);
+    text-decoration: none;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 
 body {
     height: 1000vh;
@@ -147,8 +197,10 @@ ul {
     text-decoration: none;
   }
 
-header {
-    padding: 40px 0;
+.topo-do-site{
+    position: relative;
+    top: 220px;
+    align-items: center;
 }
 
 header > .interface{
@@ -248,7 +300,7 @@ section.topo-do-site .flex{
 
 /*
 =============== 
-Sidebar
+Sidebar css
 ===============
 */
 .sidebar-toggle {
