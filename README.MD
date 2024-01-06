@@ -4,7 +4,7 @@
 Repositório desenvolvido para fins didáticos, contribuindo em um Projeto Open Source no GitHub.
 
 ### Proposta:
-Aprender sobre contribuição no GitHub. E sobre as tecnologias necessárias para a criação de um site.
+Aprender sobre contribuição no GitHub, e sobre as tecnologias necessárias para a criação de um site.
 
 
 [![My Skills](https://skillicons.dev/icons?i=py,html,css,heroku,vscode,mysql)](https://skillicons.dev)
