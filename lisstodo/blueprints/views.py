@@ -37,7 +37,7 @@ def init_app(app):
         elif resultado_login == 'Email não encontrado':
             mensagem = 'E-mail não encontrado'
         else:
-            return redirect("/")
+            mensagem = 'Login bem sucedido'
         
         return render_template("login.html", mensagem=mensagem)
 
