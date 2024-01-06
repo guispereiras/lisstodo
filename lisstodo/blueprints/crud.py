@@ -2,7 +2,7 @@ from lisstodo.ext.connection import mydb
 
 
 
-def create(email, nome, idade, sexo, senha):
+def create(email, nome, senha):
     cursor = mydb.cursor()
     comando = f'SELECT email FROM usuarios where email = "{email}"'
     cursor.execute(comando)
@@ -14,7 +14,7 @@ def create(email, nome, idade, sexo, senha):
             print("E-mail já cadastrado")
             return("E-mail já cadastrado")
         else:
-            comando = f'INSERT INTO usuarios (ID, NOME, EMAIL, SEXO, IDADE, SENHA) VALUES (DEFAULT, "{nome}", "{email}", "{sexo}", "{idade}","{senha}")'
+            comando = f'INSERT INTO usuarios (ID, NOME, EMAIL, SENHA) VALUES (DEFAULT, "{nome}", "{email}","{senha}")'
             cursor.execute(comando)
             mydb.commit()
             print('Registro adicionado com sucesso')

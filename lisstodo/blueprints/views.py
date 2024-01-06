@@ -47,19 +47,12 @@ def init_app(app):
 
         email = request.form.get("email")
         nome = request.form.get("nome")
-        idade = request.form.get("idade")
-        sexo1 = request.form.get("sexo1")
-        sexo2 = request.form.get("sexo2")
         senha = request.form.get("senha")
 
         print(email)
         print(nome)
-        print(idade)
-        print(sexo1)
-        print(sexo2)
         print(senha)
 
-        
-        crud.create(email, nome, idade, sexo1, senha)
+        crud.create(email, nome, senha)
 
         return redirect("/") 
