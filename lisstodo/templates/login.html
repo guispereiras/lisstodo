@@ -1,41 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.html">
+    <link rel="stylesheet" href="static\login.css">
     <title>Login</title>
 </head>
-
 <body>
-    <div id="form fundo">
-        <center>
-            <h1>Login</h1>
-        </center>
-        <div id="form_frente">
-            <form action="/login" id="login" method="post">
-                <center>
-                    <label for="email">E-mail: </label>
-                    <input type="email" name="email" id="email" required placeholder="Digite seu E-mail:"><br><br>
-                    <label for="senha" id="senha">Senha: </label>
-                    <input type="password" name="senha" id="senha" required placeholder="Digite sua senha: "> <br><br>
-                    <button type="submit" id="btn_login">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>ENTRAR
-                </center>
-                </button>
-            </form>
-
-            <label id="mensagem">
-                <p>{{ mensagem }}</p>
-            </label>
-
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça o seu login <br>E descubra um novo mundo de gerenciamento de tarefas</h1>
+            <img src="static\livroliss.svg" class="left-login-image" alt="Descrição livro liss">
         </div>
-
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" placeholder="Usuário">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Senha">
+                </div>
+                <button class="btn-login">Login</button>
+            </div>
+        </div>
     </div>
 </body>
-
 </html>

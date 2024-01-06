@@ -216,7 +216,7 @@ header ul li a{
 body {
     height: 1000vh;
     font-family: var(--ff-secondary);
-    background: var(--clr-grey-5);
+    background: var(--clr-primary-1);
     color: var(--clr-grey-1);
     line-height: 1.5;
     font-size: 0.875rem;
@@ -370,7 +370,8 @@ section.topo-do-site .flex{
 }
 .topo-do-site .img-topo-site img{
     position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
+    top: 0;
+    animation: flutuar 2.5s ease-in-out infinite alternate;
     max-width:500px;
     max-height:500px;
     width: auto;
