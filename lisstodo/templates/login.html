@@ -12,12 +12,13 @@
             <h1>Faça o seu login <br>E descubra um novo mundo de gerenciamento de tarefas</h1>
             <img src="static\livroliss.svg" class="left-login-image" alt="Descrição livro liss">
         </div>
+        <form action="/login" id="login" method="post">
         <div class="right-login">
             <div class="card-login">
                 <h1>LOGIN</h1>
                 <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                    <label for="email">E-mail</label>
+                    <input type="text" name="email" placeholder="E-mail">
                 </div>
                 <div class="textfield">
                     <label for="senha">Senha</label>
@@ -25,6 +26,7 @@
                 </div>
                 <button class="btn-login" type="submit" id="btn_login">Login</button>
             </div>
+        </form>
         </div>
     </div>
 </body>
