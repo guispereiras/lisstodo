@@ -1,2 +1,2 @@
 # Ignore as pastas de pycache
-__pycache__/
+*.pyc
