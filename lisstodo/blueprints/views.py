@@ -38,6 +38,8 @@ def init_app(app):
             mensagem = 'E-mail não encontrado'
         else:
             mensagem = 'Login bem sucedido'
+            
+        print(mensagem)
         
         return render_template("login.html", mensagem=mensagem)
 
