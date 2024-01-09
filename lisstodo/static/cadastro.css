@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+/* variaveis > cores */
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 63%, 48%);
+    /* primary/main color */
+    --clr-primary-5: hsl(205, 78%, 60%);
+    /* lighter shades of primary color */
+    --clr-primary-6: hsl(205, 89%, 70%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-9: hsl(205, 90%, 88%);
+    --clr-primary-10: hsl(205, 100%, 96%);
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+}
+
+body{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.main-cadastro{
+    width: 100vw; 
+    height: 100vh;
+    background: var(--clr-primary-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+}
+
+.left-cadastro{
+    width: 50vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-cadastro > h1{
+    font-size: 2vw;
+    color: var(--clr-primary-7);
+}
+
+.right-cadastro{
+    width: 50vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-cadastro{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: var(--clr-black);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px var(--clr-black);
+}
+
+.card-cadastro > h1 {
+    color: var(--clr-primary-7);
+    font-weight: 1000;
+    margin: 5px;
+}
+
+.textfield {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 14px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    background: #514869;
+    color: #f0ffffde;
+    box-shadow: #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield >input::placeholder{
+    color: #f0ffff94;
+}
+
+.btn-cadastro{
+    width: 100%;
+    padding: 18px 0px;
+    margin: 30px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #2b134b;
+    background: var(--clr-primary-7);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px var(--clr-primary-8);
+}
+
+
+@media only screen and (max-width: 950px){
+    .card-cadastro{
+        width: 85%
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-cadastro{
+        flex-direction: column;
+    }
+    .left-cadastro > h1{
+        display: none;
+    }
+
+    .left-cadastro{
+        width: 100%;
+        height: auto;
+    }
+
+    .right-cadastro{
+        width: 100%;
+        height: auto;
+    }
+
+    .left-cadastro-image{
+        width: 50vh;
+    }
+
+    .card-cadastro{
+        width: 90%;
+    }
+}

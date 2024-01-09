@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" class="text" href="static\styles.css">
+  <meta charset="UTF-8">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <title>Home</title>
+  <!-- Fim google fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="menu">
+        <nav>
+          <ul>
+            <li class="menu_nav">
+              <a href="" class="dropdown">Por que o LissToDo?</a>
+                  <div class="submenu">
+                    <div class="submenu__itens">
+                  <div class="submenu_item">
+                    <p>icon</p>
+                    <h4>Curso de HTML5</h4>
+                  </div>
+                  <div class="submenu_item">
+                    <p>icon</p>
+                    <h4>Curso de css3</h4>
+                  </div>
+                  <div class="submenu_item">
+                    <p>icon</p>
+                    <h4>Curso de JavaScript</h4>
+                  </div>
+                  <div class="submenu_item">
+                    <p>icon</p>
+                    <h4>Curso de REACT</h4>
+                  </div>
+                  <div class="submenu_item">
+                    <p>icon</p>
+                    <h4>Curso de Angular</h4>
+                  </div>
+                  <div class="submenu_item">
+                    <p>icon</p>
+                    <h4>Curso de Vue</h4>
+                  </div>
+                </div>
+
+              </div>
+            
+          </li>
+            <li class="menu_nav">
+              <a href="" class="dropdown">Funcionalidade</a>
+
+          </li>
+            <li class="menu_nav" class="dropdown"><a href="">Recursos</a>
+
+          </li>
+            <li class="menu_nav" class="dropdown"><a href="">Preços</a>
+
+          </li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <script>
+        document.addEventListener('click', (e) => {
+          const isDropdownBtn = e.target.classList.contains('dropdown');
+      
+          if (!isDropdownBtn && e.target.closest('.menu_nav') !== null) return;
+      
+          let currentSubmenu;
+      
+          if (isDropdownBtn) {
+            const item = e.target.closest('.menu_nav');
+      
+            currentSubmenu = item.querySelector('.submenu');
+      
+            currentSubmenu.classList.toggle('show');
+          }
+      
+          document.querySelectorAll('.submenu.show').forEach((submenu) => {
+            if (submenu == currentSubmenu) return;
+      
+            submenu.classList.remove('show');
+          });
+        });
+      </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        let header = document.querySelector('#header')
+        header.classList.toggle('rolagem', window.scrollY > 0)
+      })  
+    </script>
+  </header>
+  <section class="topo-do-site">
+    <div class="jstopo">
+      <h1 id="mensagem"></h1>
+    </div>
+    <div class="interface">
+      <div class="flex">
+        <div class="texto">
+          <p>O Liss ToDo é um aplicativo feito por estudantes,
+            especialmente projetado para atender às necessidades dos estudantes,
+            proporcionando uma plataforma dinâmica que facilita a organização de todas as atividades acadêmicas.
+            Com recursos inovadores, o Liss ToDo permite que você sequencie suas tarefas,
+            datas de entrega e compromissos oficiais, colocando todas as informações essenciais ao alcance das suas
+            mãos.
+            Este aplicativo/site é o parceiro perfeito para ajudar você a gerenciar suas tarefas de forma eficiente e
+            manter seu calendário acadêmico sempre sob controle.</p>
+        </div>
+        <div class="img-topo-site">
+          <img src="static/Liss.png" alt="">
+
+        </div>
+      </div>
+    </div>
+    <div class="txtdin">
+      Você <span></span>    
+    </div>
+    </div>
+    <div>
+      <!-- styles2 -->
+      <link rel="stylesheet" href="static\style.css" />
+      <!-- font-awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+      <button class="sidebar-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <a href="h">
+              <img id="logoimage" src="static/mkt@TL2020.png" alt="Logo Lisstodo">
+            </a>
+          </div><!--logo-->
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <!-- links -->
+        <ul class="links">
+          <li>
+            <a href="/login">Entrar</a>
+          </li>
+          <li>
+            <a href="/cadastro">Cadastrar</a>
+          </li>
+          <li>
+            <a href="/contato">Contato</a>
+          </li>
+        </ul>
+        <!-- social media -->
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.twitter.com">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com">
+              <i class="fab fa-behance"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com">
+              <i class="fab fa-sketch"></i>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <script>
+        const toggleBtn = document.querySelector(".sidebar-toggle");
+        const closeBtn = document.querySelector(".close-btn");
+        const sidebar = document.querySelector(".sidebar");
+
+        toggleBtn.addEventListener("click", function () {
+          // if (sidebar.classList.contains("show-sidebar")) {
+          //   sidebar.classList.remove("show-sidebar");
+          // } else {
+          //   sidebar.classList.add("show-sidebar");
+          // }
+          sidebar.classList.toggle("show-sidebar");
+        });
+
+        closeBtn.addEventListener("click", function () {
+          sidebar.classList.remove("show-sidebar");
+        });
+      </script>
+    </div>
+  </section>
+  <script>
+    // Frase a ser exibida
+    const frase = "TRANSFORMANDO SUAS TAREFAS !";
+
+    const mensagemElement = document.getElementById("mensagem");
+    const letras = frase.split(""); // Divide a frase em letras
+    let indiceLetra = 0;
+
+    function exibirProximaLetra() {
+      if (indiceLetra < letras.length) {
+        mensagemElement.textContent += letras[indiceLetra];
+        indiceLetra++;
+        setTimeout(exibirProximaLetra, 100); // Tempo de exibição de cada letra (em milissegundos)
+      }
+    }
+
+    // Iniciar a exibição da primeira letra
+    exibirProximaLetra();
+
+  </script>
+</body>
+
+</html>
