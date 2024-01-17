@@ -1,0 +1,14 @@
+.cabecalho{
+  align-items: center;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 100%;
+  text-decoration: dashed;
+}
+
+.navmenu-item{
+  text-decoration: none;
+}

@@ -1,0 +1,25 @@
+.section3{
+    align-items: center;
+    background: #E2F1FF;
+    display: flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: auto;
+}
+
+
+.section3_img{
+    width: 1000px;
+    justify-content: end;
+
+}
+
+.img_garoto{
+    width: 100%;
+}
+
+
+.section3_text{
+    padding-left: 500px;
+    padding-right: 300px;
+}
