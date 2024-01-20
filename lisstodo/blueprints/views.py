@@ -6,7 +6,7 @@ def init_app(app):
     # Rota home
     @app.route("/") 
     def homepage():
-        return render_template("home.html")
+        return render_template("welcomepage.html")
 
     # Rota para ler o login.html antes de executa-lo (Gambiarrazap)
     @app.route("/login")
